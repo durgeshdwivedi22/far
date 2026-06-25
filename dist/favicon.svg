@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <circle cx="16" cy="16" r="15" fill="#10b981"/>
+  <path d="M8 12 L12 8 L16 12 L20 8 L24 12 L20 16 L24 20 L20 24 L16 20 L12 24 L8 20 L12 16 Z" fill="#ffffff"/>
+  <circle cx="16" cy="16" r="4" fill="#065f46"/>
+</svg></content>
+<parameter name="filePath">C:\Users\dd113\Desktop\farmer-project\smart-farmer-app\public\favicon.ico
