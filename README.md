@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🌾 Smart Farmer Assistant
 
 A modern, production-ready web application for farmers with data tracking, crop suggestions, and analytics.
@@ -236,3 +237,6 @@ Built with ❤️ for farmers everywhere!
 
 **Smart Farmer Assistant** - Making farming smarter, one harvest at a time. 🌾
 "# far" 
+=======
+"# far" 
+>>>>>>> 3b274e0b6cf2e5eb7d73c3fe7992d20525719dee
