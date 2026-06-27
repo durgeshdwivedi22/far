@@ -3,6 +3,7 @@ import { Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaLock, FaUser, FaArrowRight } from 'react-icons/fa';
 import { storage } from '../utils/storage';
+import { navigateToRoute } from '../utils/router';
 
 const ProtectedRoute = ({ children, requiredAuth = true }) => {
   const user = storage.getUser();
@@ -36,7 +37,7 @@ const ProtectedRoute = ({ children, requiredAuth = true }) => {
             
             <div className="space-y-3">
               <button
-                onClick={() => window.location.href = '/login'}
+                onClick={() => navigateToRoute('/login')}
                 className="w-full flex items-center justify-center space-x-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-lg font-medium transition-colors"
               >
                 <FaUser className="text-sm" />
@@ -45,7 +46,7 @@ const ProtectedRoute = ({ children, requiredAuth = true }) => {
               </button>
               
               <button
-                onClick={() => window.location.href = '/market'}
+                onClick={() => navigateToRoute('/market')}
                 className="w-full px-6 py-3 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white font-medium transition-colors"
               >
                 Browse Public Features
@@ -56,7 +57,7 @@ const ProtectedRoute = ({ children, requiredAuth = true }) => {
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 Don't have an account?{' '}
                 <button
-                  onClick={() => window.location.href = '/register'}
+                  onClick={() => navigateToRoute('/register')}
                   className="text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 font-medium"
                 >
                   Sign up for free

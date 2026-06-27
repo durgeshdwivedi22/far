@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaBell, FaTimes, FaExclamationTriangle, FaCheckCircle, FaInfoCircle, FaExclamation } from 'react-icons/fa';
 import { useTranslation } from '../utils/translation';
 import { storage } from '../utils/storage';
+import { navigateToRoute } from '../utils/router';
 import toast from 'react-hot-toast';
 
 const Alert = ({ isDarkMode = false }) => {
@@ -154,7 +155,7 @@ const Alert = ({ isDarkMode = false }) => {
     switch (alert.action) {
       case 'add-expense':
         // Navigate to dashboard and open expense form
-        window.location.href = '/dashboard';
+        navigateToRoute('/dashboard');
         toast.info('Add your daily expense to track finances better.');
         break;
       case 'crop-health':
@@ -162,7 +163,7 @@ const Alert = ({ isDarkMode = false }) => {
         toast.success('Crop health check recorded!');
         break;
       case 'weather':
-        window.location.href = '/#weather';
+        navigateToRoute('/weather');
         break;
       case 'irrigation':
         localStorage.setItem('lastIrrigation', new Date().toISOString());
@@ -174,10 +175,10 @@ const Alert = ({ isDarkMode = false }) => {
         break;
       case 'market':
         localStorage.setItem('lastMarketUpdate', new Date().toISOString());
-        window.location.href = '/market';
+        navigateToRoute('/market');
         break;
       case 'analytics':
-        window.location.href = '/analytics';
+        navigateToRoute('/analytics');
         break;
       default:
         break;
